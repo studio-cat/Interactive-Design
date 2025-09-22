@@ -1,0 +1,134 @@
+/*ELEMENT SELECT*/
+/* This makes all "p" (i.e. paragraph) blue font. */
+h1 {
+    font-family: "Helvetica";
+    color: black;
+    font-size: 24px;
+}
+
+p {
+    font-family: "Helvetica";
+    text-align: "Left";
+    font-size: 15px;
+    color: gray
+}
+/*CLASS SELECTOR*/
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.smallcaps {
+    font-style: Helvetica;
+    text-transform: uppercase;
+    font-weight:bold;
+    color: orange;
+}
+
+.basic-box {
+    border: 3px solid #949599;
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+  }
+
+
+.full-width-box {
+    border: 3px #94959900;
+    background-color:bisque;
+    margin: 20px;
+    padding: 20px;
+    display: block;
+  }
+
+.flex-box {
+    /* border: 3px solid #FFFF; */
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    align-items: center;
+  }
+
+.title-box {
+    border: 3px solid #949599;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 150px;
+  }
+
+  .right-box {
+    margin: 5px;
+    display: box;
+    text-align: right;
+  }
+
+
+
+  /* GRID */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;                            
+    width: 100%;                           
+    margin: auto;                        
+  }
+  
+  .grid-item {
+    aspect-ratio: 1 / 1;                  
+    /* border: 2px solid #949599; */
+    display: flex;                      
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #ffffff;   
+  }
+
+
+  .flipped {
+    display: inline-block; 
+    transform: rotate(180deg);  
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;                   
+    width: 100%;
+    margin: auto;
+  }
+  
+  .grid-item-2 {
+    border: 2px solid #949599;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: #f9f9f9;
+  }
+  
+  .cover {
+    width: 150px;
+    aspect-ratio: 1 / 1;      
+    background: #ddd;       
+    border: 1px solid #999;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .artist,
+  .album {
+    font-style: helvetica;
+    font-size: 0.85rem;
+    color: #555;
+  }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles-2.css">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Caveat">
+</head>
+<body>
+
+
+<!-- ZINE TITLE -->
+<header class="header">
+  <h1 class = 'title'>LAMENT</h1>
+  <p class = 'subtitle'> by, and for, those who are hurting. </p>
+</header>
+
+
+<!--  BUTTONS -->
+<nav class="button-row" aria-label="Main navigation">
+
+    <div class="button-with-label">
+      <a class="btn btn--icon" href="0. Preface.html">
+        <img src="circle.png" alt="Person 1">
+      </a>
+      <span class="label">preface</span>
+    </div>
+
+
+    <div class="button-with-label">
+      <a class="btn btn--icon" href="1. Lamentations.html">
+        <img src="person1.png" alt="Person 1">
+      </a>
+      <span class="label">lamentations</span>
+    </div>
+
+    <div class="button-with-label">
+      <a class="btn btn--icon" href="2. Make it to the end.html">
+        <img src="person2.png" alt="Person 1">
+      </a>
+      <span class="label">i'll make it if</span>
+    </div>
+
+    <div class="button-with-label">
+      <a class="btn btn--icon" href="3. Because.html">
+        <img src="person3.png" alt="Person 1">
+      </a>
+      <span class="label">because</span>
+    </div>
+
+    <div class="button-with-label">
+      <a class="btn btn--icon" href="4. Reflections.html">
+        <img src="circle.png" alt="Person 1">
+      </a>
+      <span class="label">reflections</span>
+    </div>
+
+</nav>
+
+<br><br>
+
+<audio id="LoveNote" src="music-0.mp3" loop preload="metadata"></audio>
+<button id="startMusic">click to play a love note</button>
+
+<script>
+  const audio = document.getElementById('LoveNote');
+  const btn = document.getElementById('startMusic');
+
+  btn.addEventListener('click', async () => {
+    try {
+      // ensure duration is known before seeking
+      if (isNaN(audio.duration)) {
+        await new Promise(res => audio.addEventListener('loadedmetadata', res, { once: true }));
+      }
+      audio.currentTime = 55;     // start at 55s
+      await audio.play();         // user gesture -> allowed
+    } catch (err) {
+      console.error('Playback failed:', err);
+    }
+  });
+</script>
+
+
+</body>
+</html>
