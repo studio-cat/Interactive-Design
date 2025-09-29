@@ -203,3 +203,42 @@ display: block;
         height: 20px;
         align-items: center;
       }
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;   
+  padding: 0 50px;       
+  margin-top: 3rem;      
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;      
+  gap: 2rem;                 
+  text-align: center;        
+}
+
+/* Middle dot styling */
+.footer-dot {
+  font-size: 2rem;
+  line-height: 1;
+  color: #b6b6b6;             
+  user-select: none;
+}
+
+/* Reuse hover effects for images */
+.button-with-label img {
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.button-with-label a:hover img {
+  opacity: 1;
+  transform: scale(1.03);
+}
