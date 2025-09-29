@@ -7,66 +7,60 @@
     <!-- HEADER -->
     <!-- HEADER -->
     <div class = "header">
-            <p style = "color:white"> living in an 
-            <h1 style = "font-size: 50; color:white; transform: rotate(180deg)"> upside down </h1> 
-            <p style = "color:white"> world </p>
-    </header>
-    
-   <br>
-   
-   <p style = "text-align: center; color: white;">
-     <br><br><br>
-     <i>entries from journal<br><br><br><br><br><br><br><br>
+            <p style = "color:white ; font-weight: bold"> PREFACE </p> <br>
+            <h1 style = "font-size: 50; color:white; transform: rotate(180deg)">upside down world</h1> 
 
+    <!-- ###### MUSIC PLAYER ###### -->
+    <audio id="LoveNote" src="lessonzero.mp3" loop preload="metadata"></audio>
+    <button id="startMusic">listen to lesson zero</button>
 
-    what a fool we must look like! <br><br>
-    to believe that <br>
-    the first shall be last <br>
-    the last shall be first <br>
-    the humble will be exalted <br>
-    the exalted will be humbled <br><br>
-    to live such a seemingly <br>
-    counterintuitive life <br> 
-    </i>
-    
-    <br>
-     <i> Day 2. <br><br>
+    <script>
+      const audio = document.getElementById('LoveNote');
+      const btn = document.getElementById('startMusic');
 
-       He is so gracious. <br>
-       He shows me grace <br>
-       from my target of bitterness.<br>
-       He uses the most unworthy, <br>
-       the most weak <br> <br>
-     </i>
-   
-     He teaches an upside down world <br>
-   
-     Nothing makes sense, <br>
-     but at the same time, <br>
-     everything makes complete,  <br>
-     perfect, sense. <br>
-   
-     <br>
-   
-     the way, <br>
-     the truth <br>
-     the life <br>
-   
-     <br>
-     A Seed must Die. <br>
-     <br>
-     <i>
-         What does it mean to<br>
-         die to myself daily?<br>
-         What an irony it is that<br>
-         it's easier to die for someone<br>
-         than to die to yourself <br>
-         for their sake<br>
-     </i>
-     <br>
-     <!-- <img src="eads.png" style="width:300px">
-   
-    -->
-     </div>
+      btn.addEventListener('click', async () => {
+        try {
+          if (isNaN(audio.duration)) {
+            await new Promise(res => audio.addEventListener('loadedmetadata', res, { once: true }));
+          }
+          audio.currentTime = 63; 
+          await audio.play();         
+        } catch (err) {
+          console.error('Playback failed:', err);
+        }
+      });
+    </script>    
+    </div>
 
-</div>
+    <div>
+      <p style = "
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center; 
+        color: white;"> 
+        
+        <br><br><br><br>
+
+        who am i, and who are you? rather, <i>what</i> are we? merely coincidental collections of atoms that happen to be able to think, feel and act? yet why do you all work so hard? <i>what is it </i>that you're striving towards? <br><br><br>
+
+        <i><b>what is it that you see that i cannot?</b> <br><br><br></i>
+
+        it is too noisy outside. <br>
+        what is the truth? which way is right? is there any meaning to this all? 
+        
+        <br><br>
+        <br><br>.
+        <br><br>
+        <br><br>.
+        <br><br>
+        <br><br>.
+        <br><br>
+        <br><br>
+
+        <b style = "font-family: Arial, Helvetica, sans-serif;">LAMENT</b> is for those who, too, wrestle with these questions. <br> <br>
+
+        it is a testimony of how i have found, <br>
+        and am drowning in the infinite depths of the grace of, <br><br>
+
+        the truth. 
+
+  </div>
